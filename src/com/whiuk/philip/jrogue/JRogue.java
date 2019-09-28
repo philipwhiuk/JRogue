@@ -1,13 +1,11 @@
 package com.whiuk.philip.jrogue;
 
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.Image;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.Map;
 import java.util.Random;
 import java.util.logging.Logger;
 
@@ -235,7 +233,15 @@ public class JRogue extends JPanel implements KeyListener, JRogueStateHandler {
 	 */
 	private void paintBuffer(final Graphics g) {
 		LOGGER.info("Painting buffer");
-		render((Graphics2D) g, bufferWidth, bufferHeight);
+		Graphics2D graphics2D = (Graphics2D) g;
+        Map<?, ?> desktopHints =
+                (Map<?, ?>) Toolkit.getDefaultToolkit().getDesktopProperty("awt.font.desktophints");
+
+        Graphics2D g2d = (Graphics2D) g;
+        if (desktopHints != null) {
+            g2d.setRenderingHints(desktopHints);
+        }
+		render(graphics2D, bufferWidth, bufferHeight);
 	}
 	/**
 	 * Set the buffer to the current size of the panel.

@@ -65,7 +65,7 @@ public class StartScreen extends Screen {
 	 */
 	public final void render(final Graphics2D g,
 			final int width, final int height) {
-		g.setColor(Color.black);
+		g.setColor(GraphicsUtil.BLACK);
 		g.fillRect(0, 0, width, height);
 		GraphicsUtil.drawText(g, JRogue.TITLE + " - " + JRogue.DESCRIPTION,
 				TITLE_X, TITLE_Y);

@@ -60,7 +60,7 @@ public class PlayerInfo implements Renderable {
 		if(game.getPlayer().getArea().getType().equals(AreaType.CAVE)) {
 			GraphicsUtil.drawText(g,
 					"Cave Level: "
-						+ ((CaveLevel) game.getPlayer().getLocation()),
+						+ ((CaveLevel) game.getPlayer().getLocation()).getLevel(),
 					MARGIN, FLOOR_Y);
 		}
 		GraphicsUtil.drawText(g,

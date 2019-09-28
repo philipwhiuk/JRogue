@@ -45,7 +45,7 @@ public final class GraphicsUtil {
 	/**
 	 * 
 	 */
-	public static final Color BLACK = Color.black;
+	public static final Color BLACK = new Color(25, 25, 25);
 	/**
 	 * 
 	 */
@@ -94,7 +94,7 @@ public final class GraphicsUtil {
 	 * Text font.
 	 */
 	private static final Font TEXT_FONT =
-			new Font("Courier New", Font.PLAIN, 12);
+			new Font("Courier New", Font.PLAIN, 14);
 	
 	/**
 	 * Draw some text on the screen at the given coordinates.

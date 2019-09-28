@@ -30,7 +30,7 @@ public final class World {
 	 * 
 	 */
 	public World() {
-		areas = new ArrayList<Area>();
+		areas = new ArrayList<>();
 		Area startArea = new GeneratedCave(this);
 		areas.add(startArea);
 		startLocation = CaveLevelBuilder.getGroundFloor(startArea);
